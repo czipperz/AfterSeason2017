@@ -64,6 +64,7 @@ public class OI {
 		SmartDashboard.putData("Reread Preferences", new RereadPreferences());
 		
 		pref = Preferences.getInstance();
+		rereadPreferences();
 	}
 	
 	public void rereadPreferences() {
