@@ -28,9 +28,16 @@ public class DriveTrain extends Subsystem {
 	 * This is used to allow autonomous to get through acceleration and
 	 * velocity controls we may place and instead use PID.
 	 */
-	public void drive(double left, double right) {
+	public void driveRaw(double left, double right) {
 		leftDrive.set(left);
 		rightDrive.set(-right);
+	}
+	
+	/**
+	 * Drive in teleop.
+	 */
+	public void drive(double left, double right) {
+		driveRaw(left, right);
 	}
 
 	public void stop() {
